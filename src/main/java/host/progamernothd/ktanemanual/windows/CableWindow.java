@@ -8,7 +8,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-import host.progamernothd.ktanemanual.enums.Cable;
+import host.progamernothd.ktanemanual.enums.KTANEColor;
 import host.progamernothd.ktanemanual.solver.CableSolver;
 
 import javax.swing.JTextArea;
@@ -21,7 +21,7 @@ import javax.swing.JLabel;
 public class CableWindow {
 
 	private JFrame frame;
-	LinkedList<Cable> cableList = new LinkedList<>();
+	LinkedList<KTANEColor> cableList = new LinkedList<>();
 	JTextArea textArea;
 	JTextArea targetValue;
 	
@@ -52,7 +52,7 @@ public class CableWindow {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void addCable(Cable c) {
+	private void addCable(KTANEColor c) {
 		cableList.add(c);
 		reDrawList();
 	}
@@ -149,14 +149,14 @@ public class CableWindow {
 		panel.add(btnRot);
 		btnRot.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addCable(Cable.Red);
+				addCable(KTANEColor.Red);
 			}
 		});
 		
 		JButton btnGelb = new JButton("Gelb");
 		btnGelb.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addCable(Cable.Yellow);
+				addCable(KTANEColor.Yellow);
 			}
 		});
 		panel.add(btnGelb);
@@ -164,7 +164,7 @@ public class CableWindow {
 		JButton btnWei = new JButton("Wei\u00DF");
 		btnWei.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addCable(Cable.White);
+				addCable(KTANEColor.White);
 			}
 		});
 		panel.add(btnWei);
@@ -172,7 +172,7 @@ public class CableWindow {
 		JButton btnBlau = new JButton("Blau");
 		btnBlau.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addCable(Cable.Blue);
+				addCable(KTANEColor.Blue);
 			}
 		});
 		panel.add(btnBlau);
@@ -180,7 +180,7 @@ public class CableWindow {
 		JButton btnSchwarz = new JButton("Schwarz");
 		btnSchwarz.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addCable(Cable.Black);
+				addCable(KTANEColor.Black);
 			}
 		});
 		panel.add(btnSchwarz);
