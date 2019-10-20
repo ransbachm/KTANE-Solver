@@ -13,8 +13,6 @@ import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import javax.swing.JLabel;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeEvent;
 import javax.swing.JPanel;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -44,6 +42,7 @@ public class MainWindow {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
@@ -165,6 +164,7 @@ public class MainWindow {
 	public JCheckBox getCarCheckbox() {
 		return carCheckbox;
 	}
+	@SuppressWarnings("rawtypes")
 	public JComboBox getBatteryComboBox() {
 		return batteryComboBox;
 	}
