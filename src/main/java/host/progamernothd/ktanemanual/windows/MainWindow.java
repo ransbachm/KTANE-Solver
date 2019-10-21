@@ -157,7 +157,7 @@ public class MainWindow {
 		
 		batteryComboBox = new JComboBox();
 		panel_1.add(batteryComboBox);
-		batteryComboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+		batteryComboBox.setModel(new DefaultComboBoxModel(new String[] {"0", "1", "2", "3", "4", "5"}));
 		
 		frkCheckbox = new JCheckBox("FRK");
 		panel.add(frkCheckbox);
