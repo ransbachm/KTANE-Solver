@@ -101,26 +101,32 @@ public class MainWindow {
 				ButtonWindow.main(null);
 			}
 		});
+		
+		JButton btnZeichen = new JButton("Zeichen");
+		btnZeichen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SymbolWindow.main(null);
+			}
+		});
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addGroup(groupLayout.createSequentialGroup()
 							.addComponent(lblSerialId)
 							.addGap(36))
 						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addContainerGap())
-						.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-							.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
-								.addComponent(btnNewButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(btnKnopf, GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
-							.addPreferredGap(ComponentPlacement.RELATED, 234, Short.MAX_VALUE)
-							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-								.addComponent(panel, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(txtEptd, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+								.addComponent(btnZeichen, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(btnKnopf, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(btnNewButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+							.addPreferredGap(ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
+							.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+								.addComponent(panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(txtEptd, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 							.addContainerGap())))
 		);
 		groupLayout.setVerticalGroup(
@@ -139,8 +145,10 @@ public class MainWindow {
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(6)
+							.addComponent(btnKnopf)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(btnKnopf)))
+							.addComponent(btnZeichen)))
 					.addContainerGap(120, Short.MAX_VALUE))
 		);
 		
