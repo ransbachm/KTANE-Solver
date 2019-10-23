@@ -20,7 +20,7 @@ public class ButtonSolver {
 			return ButtonAction.Hold;
 		}
 			
-		if(Main.mw.batteryComboBox.getSelectedIndex()+1 >2 && Main.mw.getFrkCheckbox().isSelected()) {
+		if(Main.mw.batteryComboBox.getSelectedIndex() >2 && Main.mw.getFrkCheckbox().isSelected()) {
 			return ButtonAction.Relase;
 		}
 			
