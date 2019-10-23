@@ -1,6 +1,6 @@
 package host.progamernothd.ktanemanual.enums;
 
 public enum KTANEColor {
-	Red, Blue, Yellow, White, Black;
+	Red, Green, Blue, Yellow, White, Black;
 
 }
