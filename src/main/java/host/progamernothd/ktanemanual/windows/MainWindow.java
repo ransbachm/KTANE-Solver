@@ -102,8 +102,8 @@ public class MainWindow {
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
+					.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
 						.addComponent(panel_1, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(panel, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -118,8 +118,10 @@ public class MainWindow {
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 231, GroupLayout.PREFERRED_SIZE)
 						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 231, GroupLayout.PREFERRED_SIZE)
+							.addContainerGap())
+						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
 							.addComponent(lblSerialId)
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(txtEptd, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -130,8 +132,8 @@ public class MainWindow {
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(panel_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-					.addGap(18))
+							.addComponent(panel_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18))))
 		);
 		
 		paralellCheckbox = new JCheckBox("Parallel");
@@ -163,6 +165,14 @@ public class MainWindow {
 		
 		JButton btnSenso = new JButton("Senso");
 		panel_3.add(btnSenso);
+		
+		JButton btnWhosOnFirst = new JButton("Who's on first");
+		btnWhosOnFirst.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				WhosOnFirstWindow.main(null);
+			}
+		});
+		panel_3.add(btnWhosOnFirst);
 		btnSenso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SensoWindow.main(null);
