@@ -12,7 +12,7 @@ public class ButtonSolver {
 			return ButtonAction.Hold;
 		}
 		
-		if(Main.mw.batteryComboBox.getSelectedIndex()+1 >1 && instruction == ButtonInstruction.Detonate) {
+		if(Main.mw.batteryComboBox.getSelectedIndex() >1 && instruction == ButtonInstruction.Detonate) {
 			return ButtonAction.Relase;
 		}
 			
