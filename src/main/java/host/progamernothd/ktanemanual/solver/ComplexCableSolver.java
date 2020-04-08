@@ -1,6 +1,6 @@
 package host.progamernothd.ktanemanual.solver;
 
-import host.progamernothd.ktanemanual.Main;
+import host.progamernothd.ktanemanual.KtanePlusPlusMain;
 import host.progamernothd.ktanemanual.enums.ComplexCableFeature;
 import host.progamernothd.ktanemanual.windows.MainWindow;
 
@@ -88,13 +88,13 @@ public class ComplexCableSolver {
 		return "Don't cut";
 	}
 	private static String solveParallel() {
-		if(Main.mw.getParalellCheckbox().isSelected()) {
+		if(KtanePlusPlusMain.mw.getParalellCheckbox().isSelected()) {
 			return "cut";
 		}
 		return "Don't cut";
 	}
 	private static String solveBatteries() {
-		if(Main.mw.batteryComboBox.getSelectedIndex()>=2) {
+		if(KtanePlusPlusMain.mw.batteryComboBox.getSelectedIndex()>=2) {
 			return "cut";
 		}
 		return "Don't cut";
