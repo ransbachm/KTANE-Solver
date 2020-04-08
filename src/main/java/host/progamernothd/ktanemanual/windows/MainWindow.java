@@ -173,6 +173,14 @@ public class MainWindow {
 			}
 		});
 		panel_3.add(btnWhosOnFirst);
+		
+		JButton btnPasswort = new JButton("Passwort");
+		btnPasswort.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PasswortWindow.main(null);
+			}
+		});
+		panel_3.add(btnPasswort);
 		btnSenso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SensoWindow.main(null);
