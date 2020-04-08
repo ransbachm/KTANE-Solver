@@ -10,9 +10,9 @@ public class WhosOnFirstSolverStage1 {
 	static HashMap<String, Integer> combos = new HashMap<>();
 	
 	static {
-		words = List.of("YES", "FIRST", "DISPLAY", "OKAY", "SAYS", "NOTHING ", "[nothing]", "BLANK", "NO", "LED", "LEAD", 
-				"READ", "RED", "REED", "LEED", "HOLD  ON", "YOU", "YOUARE", "YOUR", "YOU\'RE", "UR", "THERE", "THEY\'RE", 
-				"THEIR", "THEYARE", "SEE", "C", "CEE");
+		words = List.of("YES", "FIRST", "DISPLAY", "OKAY", "SAYS", "NOTHING ", "" /*[blank]*/, "BLANK", "NO", "LED", "LEAD", 
+				"READ", "RED", "REED", "LEED", "HOLD ON", "YOU", "YOU ARE", "YOUR", "YOU\'RE", "UR", "THERE", "THEY\'RE", 
+				"THEIR", "THEY ARE", "SEE", "C", "CEE");
 		
 		ints = List.of(3,2,6,2,6,3,5,4,6,3,6,4,4,5,5,6,4,6,4,4,1,6,5,4,4,6,2,6);
 		Iterator<Integer>  iterator = ints.iterator();
