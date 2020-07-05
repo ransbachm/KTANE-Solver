@@ -79,13 +79,29 @@ public class ComplexCableWindow {
 		JPanel panel = new JPanel();
 		
 		textAreaIn = new JTextArea();
+		textAreaIn.setLineWrap(true);
 		
 		textAreaOut = new JTextArea();
+		textAreaOut.setLineWrap(true);
 		
 		JButton btnLsen = new JButton("Berechnen");
 		btnLsen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				solve();
+			}
+		});
+		
+		JButton btnNewButton = new JButton("R\u00FCckg\u00E4ngig");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				removeLast();
+			}
+		});
+		
+		JButton btnAllesLschen = new JButton("Alles l\u00F6schen");
+		btnAllesLschen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				removeAll();
 			}
 		});
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
@@ -94,32 +110,33 @@ public class ComplexCableWindow {
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
-							.addComponent(textAreaIn, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE))
-						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-							.addComponent(btnLsen)
-							.addPreferredGap(ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
-							.addComponent(textAreaOut, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap())
+						.addComponent(btnLsen)
+						.addComponent(btnNewButton)
+						.addComponent(panel, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnAllesLschen, GroupLayout.PREFERRED_SIZE, 117, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+						.addComponent(textAreaOut, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textAreaIn, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE))
+					.addGap(23))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(textAreaIn, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
-						.addComponent(panel, GroupLayout.PREFERRED_SIZE, 127, GroupLayout.PREFERRED_SIZE))
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(panel, GroupLayout.PREFERRED_SIZE, 127, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textAreaIn, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
 						.addGroup(groupLayout.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-							.addComponent(textAreaOut, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
-							.addContainerGap())
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(18)
 							.addComponent(btnLsen)
-							.addContainerGap())))
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnNewButton)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnAllesLschen))
+						.addComponent(textAreaOut, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap())
 		);
 		
 		JButton btnRed = new JButton("Rot");
@@ -146,13 +163,13 @@ public class ComplexCableWindow {
 		});
 		panel.add(btnStar);
 		
-		JButton btnLed = new JButton("LED");
-		btnLed.addActionListener(new ActionListener() {
+		JButton btnStar_1 = new JButton("LED");
+		btnStar_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addCable(Star);
+				addCable(LED);
 			}
 		});
-		panel.add(btnLed);
+		panel.add(btnStar_1);
 		frame.getContentPane().setLayout(groupLayout);
 	}
 	public JTextArea getTextAreaIn() {
